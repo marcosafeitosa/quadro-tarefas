@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css"> <!--Arquivo CSS-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"> <!--Arquivo de fonte de texto-->
+    <link rel="icon" type="png" href="./LogoTipoSystem.png"> <!--Ícone do navegador-->
+    <title>Login</title> <!--Título do navegador-->
+</head>
+<body>
+    <header></header> <!--Cabeçalho-->
+
+    <section class="container"> <!--Bloco do login-->
+        <div class="login-screen"> <!--Tela-->
+            <div class="text-login">Login</div> <!--Texto-->
+            <form class="formLogin"> <!--Formulário para receber os e-mails-->
+                <label for="userEmail">E-mail:</label>
+                <input type="email" placeholder="Informe seu e-mail" name="emailLogin" id="userEmail" required> <!--Input para digitar o e-mail-->
+                <div id="message-error"></div> <!--Mensagem de erro-->
+                <button type="submit" class="login-button" id="botaoUsuario">Entrar</button> <!--Botão para redirecionar a página-->
+            </form>
+        </div>
+    </section>
+
+    <footer> <!--Rodapé--> 
+        <p>&copy; 2024 Meu Sistema. Todos os direitos reservados.</p> <!--Texto-->
+    </footer>
+</body>
+<script src="./script.js"></script> <!--Arquivo JavaScript-->
+</html>

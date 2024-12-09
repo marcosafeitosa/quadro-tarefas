@@ -1,0 +1,155 @@
+* { /*Seletor universal, ou seja, todos os elementos terão essas condições*/
+    margin: 0; /*Remova a margem*/
+    padding: 0; /*Remova espaçamento interno*/
+    box-sizing: border-box; /*Largura e a altura de um elemento são calculadas no modelo de caixa*/
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /*Fonte do texto*/
+    background-color: #f2f2f2; /*Cor de fundo*/
+    height: 100vh; /*Faz com que o fundo cubra a tela inteira*/ 
+    display: flex; /*Layout flexível*/
+    flex-direction: column; /*Organiza os elementos em uma coluna vertical*/
+}
+
+nav {
+    display: flex; /*Layout flexível*/
+    background: linear-gradient(to right, rgb(97, 1, 29), rgb(44, 0, 68)); /*Cor de fundo igual ao do gradiente*/
+    padding: 20px; /*Espaçamento interno*/
+    text-align: center; /*Centraliza o texto*/
+    font-size: 24px; /*Tamanho da fonte*/
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /*Sombra*/
+    justify-content: space-between; /*Espaça os os elementos ao longo da barra de navegação*/
+    align-items: center; /*Alinha os elementos verticalmente*/
+    position: relative; 
+}
+
+.selecao-container {  
+    margin-right: 20px; /*Espaçamento à direita*/ 
+}
+
+.selecao-board {  
+    padding: 5px 10px; /*Espaçamento interno*/  
+    font-size: 16px; /*Tamanho da fonte*/  
+    border: none; /*Remova a borda*/  
+    border-radius: 4px; /*Bordas arredondadas*/ 
+    width: 150px; /*Largura*/ 
+}
+
+.titulo {
+    font-size: 32px; /*Tamanho da fonte*/
+    font-weight: bold; /*Negrito*/
+    letter-spacing: 2px; /*Espaçamento entre as letras*/
+    text-transform: uppercase; /*Deixa as letras em maiúsculo*/
+    color: white; /*Cor do texto*/
+    position: absolute; /* Torna o título posicionado de forma absoluta */
+    left: 50%; /* Coloca o título no meio horizontalmente */
+    transform: translateX(-50%); /* Ajusta o título para que fique exatamente no centro */
+}
+
+#saudacao-usuario {
+    font-size: 30px; /*Tamanho da fonte*/
+    font-weight: bold; /*Negrito*/
+    letter-spacing: 2px; /*Espaçamento entre as letras*/
+    text-transform: uppercase; /*Deixa as letras em maiúsculo*/
+    color: white; /*Cor do texto*/
+}
+
+#detalhes-board {
+    background-color: rgba(255, 255, 255, 0.8); /*Fundo com transparência*/
+    border-radius: 8px; /*Bordas arredondadas*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /*Sombra*/
+    padding: 30px; /*Aumenta o padding interno para dar mais espaço entre o conteúdo e as bordas*/
+    margin-top: 40px; /*Aumenta o espaço acima*/
+    margin-left: 20px; /*Espaçamento nas laterais*/
+    margin-right: 20px; /*Espaçamento nas laterais*/
+    margin-bottom: 20px; /*Espaço abaixo*/
+    width: calc(100% - 40px); /*Largura ajustada, considerando as margens*/
+    max-width: 350px; /*Largura máxima*/
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /*Transição e animação*/
+    overflow: hidden; /*Garante que o conteúdo não vaze*/
+}
+
+#detalhes-board:hover {
+    transform: scale(1.05); /*Aumenta o tamanho ao passar o mouse*/
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /*Aumenta a sombra ao passar o mouse*/
+}
+
+#detalhes-board h2 {
+    font-size: 1.3rem; /*Tamanho da fonte*/
+    color: #333; /*Cor do texto*/
+    margin-bottom: 15px; /*Maior espaço abaixo do título*/
+    font-weight: 600; /*Peso da fonte*/
+    text-align: center; /*Centraliza o título*/
+}
+
+#detalhes-board p {
+    font-size: 1rem; /*Tamanho da fonte*/
+    color: #555; /*Cor do texto*/
+    margin-bottom: 20px; /*Maior espaçamento entre os parágrafos*/
+}
+
+#detalhes-board p strong {
+    font-weight: bold; /*Negrito*/
+    color: #333; /*Cor do texto*/
+}
+
+#detalhes-board .descricao-task {
+    background-color: #fff; /*Cor de fundo*/
+    border: 1px solid #ddd; /*Borda ao redor do elemento*/
+    border-radius: 4px; /*Borda arredondada*/
+    padding: 15px; /*Espaçamento interno*/
+    font-size: 0.95rem; /*Tamanho da fonte*/
+    color: #333; /*Cor do texto*/
+    margin-top: 15px; /*Espaço superior*/
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /*Transição e animação*/
+}
+
+#detalhes-board .descricao-task:hover {
+    border-color: rgba(162, 0, 49, 0.8); /*Cor da borda ao passar o mouse*/
+    box-shadow: 0 0 5px rgba(162, 0, 49, 0.2); /*Sombra*/
+}
+
+#detalhes-board .botao-acao {
+    background-color: transparent; /*Fundo transparente*/
+    background-image: linear-gradient(to bottom right, rgb(50, 50, 50), rgb(0, 0, 0)); /*Gradiente de fundo*/
+    color: white; /*Cor do texto*/
+    padding: 12px 0; /*Espaçamento interno*/
+    border: none; /*Remove a borda*/
+    border-radius: 8px; /*Borda arredondada*/
+    font-size: 1rem; /*Tamanho da fonte*/
+    text-align: center; /*Centraliza o texto*/
+    cursor: pointer; /*Cursor de clique*/
+    transition: background-color 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease; /*Transição e animação*/
+    width: 100%; /*Botão ocupa toda a largura*/
+    margin-top: 15px; /*Espaço superior*/
+}
+
+#detalhes-board .botao-acao:hover {
+    background-color: rgba(162, 0, 49, 0.8); /*Cor de fundo ao passar o mouse*/
+    background: linear-gradient(to right, rgb(97, 1, 29), rgb(44, 0, 68)); /*Gradiente ao passar o mouse*/
+    opacity: 1; /*Opacidade 100%*/
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /*Sombra*/
+    transform: scale(1.05); /*Aumenta o tamanho do botão ao passar o mouse*/
+}
+
+#detalhes-board .botao-acao:active {
+    transform: translateY(2px) scale(0.95); /*Efeito de "afundar" ao clicar*/
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /*Reduz a sombra ao clicar*/
+}
+
+footer {
+    background: linear-gradient(to right, rgb(97, 1, 29), rgb(44, 0, 68)); /*Gradiente igual ao fundo*/
+    color: white; /*Cor do texto*/
+    text-align: center; /*Centraliza o texto*/
+    padding: 15px; /*Espaçamento interno*/
+    font-size: 16px; /*Tamanho da fonte*/
+    width: 100%; /*Garante que ocupe toda a largura*/
+    position: absolute; /*Posiciona o rodapé na parte inferior da página*/
+    bottom: 0; /*Garante que o rodapé esteja na parte inferio*/
+}
+
+footer p {
+    margin: 0; /*Remove margens*/
+    font-size: 16px; /*Tamanho de fonte*/
+}

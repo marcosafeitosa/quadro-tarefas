@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/board.css" />
+    <!--Arquivo CSS-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!--Arquivo de fonte de texto-->
+    <title>Quadro de Tarefas</title>
+    <!--Título do navegador-->
+  </head>
+  <body>
+    <!--Navbar-->
+    <nav>
+      <div class="container-titulo">
+        <!--Container para o bloco do título da nav-->
+        <h2 class="titulo-nav">Quadro de Tarefas</h2>
+        <!--Título central da nav-->
+        <div class="botao-acoes">
+          <button id="criar-quadro" class="nav-button">Criar Quadro</button>
+          <button id="deletar-quadro" class="nav-button danger">
+            Excluir Quadro
+          </button>
+        </div>
+      </div>
+
+      <select class="selecao-quadro" id="selecao-quadro-tarefa">
+        <option selected>Selecione um quadro</option>
+      </select>
+
+      <!--Alternância para o modo escuro-->
+      <label class="alternar-modo">
+        <input type="checkbox" id="botao-modo-escuro" />
+        <!--Caixa de seleção (checkbox) para ativar ou desativar o modo escuro-->
+        <span class="slider-modo-escuro"></span>
+        <!--Elemento visual do interruptor/alternância-->
+        <p>Modo Escuro</p>
+        <!--Texto que indica o nome da funcionalidade-->
+      </label>
+    </nav>
+
+    <h2 id="titulo-quadro"></h2>
+    <!--Título do quadro-->
+    <div id="loading">
+      <h1>Loading... please wait</h1>
+    </div>
+    <!--Container de colunas de tarefas-->
+    <div class="colunas" id="container-colunas" class="hide">
+      <div id="colunas-tarefa"></div>
+    </div>
+
+    <script src="./board.js" type="module"></script>
+    <!--Arquivo JavaScript-->
+  </body>
+</html>
